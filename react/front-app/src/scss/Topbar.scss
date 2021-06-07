@@ -1,7 +1,19 @@
-.Topbar {
+.topBarBox {
     background: white;
     width: 100%;
+}
+.topBar {
+    width: calc(100% - 4em);
     height: 4em;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+}
+.searchBtn {
 }

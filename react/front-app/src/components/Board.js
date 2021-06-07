@@ -2,7 +2,9 @@ import React from 'react';
 import '../scss/Board.scss';
 function Board(){
     return (
-        <div className="board">테스트</div>
+        <div className="board">
+            
+        </div>
     );
 }
 export default Board;
