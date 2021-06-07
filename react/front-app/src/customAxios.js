@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-export default function customAxios(url, callback){
-    axios({
+export default async function customAxios(url, callback){
+    await axios({
         url: '/api' + url,
         method: 'post',
         baseURL: 'http://localhost:8080',

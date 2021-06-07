@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
 import customAxios from './customAxios';
+import './App.scss';
+import Board from './components/Board';
+import Topbar from './components/Topbar';
 
 function App() {
   const [ip, setIp] = useState('');
@@ -12,12 +14,17 @@ function App() {
     customAxios('/ip', callback);
   }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        ip : {ip}
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <Topbar/>
+        <Board/>
+      </div>
+    </>
   );
 }
 
 export default App;
+
+//     logo text       search
+//             body
+//navi                        navi
