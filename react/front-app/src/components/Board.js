@@ -1,9 +1,10 @@
 import React from 'react';
 import '../scss/Board.scss';
-function Board(){
+
+function Board({children}){
     return (
         <div className="board">
-            
+            {children}
         </div>
     );
 }

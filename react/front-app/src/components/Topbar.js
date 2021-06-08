@@ -8,11 +8,11 @@ function Topbar(){
         <div className="topBarBox">
             <div className="topBar">
                 <div className="logo">
-                    <DiReact size="1em"/>
-                    React
+                    <DiReact size="2em"/>
+                    HY
                 </div>
                 <div className="searchBtn">
-                    <BsSearch/>
+                    <BsSearch size="2em"/>
                 </div>
             </div>
         </div>
