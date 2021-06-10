@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import '../scss/Topbar.scss';
 import { BsSearch } from 'react-icons/bs';
 import { DiReact } from "react-icons/di";
@@ -23,10 +23,9 @@ function Topbar(){
             searchBtnRef.current.style.display = "none";
         }
     }
-
-    const onChange = (e) => {
+    const onChange = useCallback((e) => {
         setText(e.target.value);
-    }
+    },[]);
     return (
         <div className="topBarBox">
             <div className="topBar">
@@ -45,4 +44,4 @@ function Topbar(){
     );
 }
 
-export default Topbar;
+export default React.memo(Topbar);

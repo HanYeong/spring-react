@@ -27,7 +27,7 @@ function App() {
           <BoardDate/>
           <Info/>
           <SubTitle/>
-          <TextArea name="TA" id="FA"/>
+          <TextArea/>
         </Board>
       </div>
     </>
