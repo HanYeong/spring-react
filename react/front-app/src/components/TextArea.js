@@ -2,10 +2,16 @@ import React from 'react';
 import '../scss/textArea.scss';
 import axios from 'axios';
 import useAsync from './useData';
+import Topbar from './Topbar';
+import Board from './Board';
+import Title from './Title';
+import BoardDate from './BoardDate';
+import Info from './Info';
+import SubTitle from './SubTitle';
 
 async function getUsers() {
   const response = await axios.get(
-    'https://jsonplaceholder.typicode.com/users'
+    'http://localhost:8080/api/ip'
   );
   return response.data;
 }
@@ -20,14 +26,24 @@ const { loading, data: text, error } = state;
   if (!text) return null;
   return (
     <>
+      <Topbar/>
+      <Board>
+      <Title/>
+      <BoardDate/>
+      <Info/>
+      <SubTitle/>
       <div className="text">
-        {text.map(text => (
+        {text}
+        {console.log(text.length)}
+        {/* {text.map(text => (
           <span  key={text.id}>
             <h3>{text.name}</h3>
             <p>{text.username} ({text.email})</p>
           </span>
-        ))}         
+        ))}          */}
       </div>
+      </Board>
+      
     </>
   );
 }
