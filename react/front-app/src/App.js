@@ -4,6 +4,7 @@ import './App.scss';
 import TextArea from './components/TextArea';
 import { Link, Route } from 'react-router-dom';
 import Notice from './components/Notice';
+import CounterContainer from './containers/CounterContainer';
 
 function App() {
   // const [ip, setIp] = useState('');
@@ -30,7 +31,7 @@ function App() {
     <div>
       <Link to="/">홈</Link>
       <Link to="/text">텍스트</Link>
-      <Route path="/" exact={true} component={Notice}/>
+      <Route path="/" exact={true} component={CounterContainer}/>
       <Route path="/text" exact={true} component={TextArea}/>
     </div>
   );
