@@ -1,0 +1,14 @@
+[
+    {
+        "cid": 1,
+        "writer":"test1234",
+        "title": "a1",
+        "text": "dummy text1"
+    },
+    {
+        "cid": 2,
+        "writer":"test1234",
+        "title": "a2",
+        "text": "dummy text2"
+    }
+]
