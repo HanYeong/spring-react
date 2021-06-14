@@ -13,7 +13,7 @@
 .logo {
     display: flex;
     align-items: center;
-    font-size: 2em;
+    font-size: 1.5em;
     cursor: pointer;
 }
 .searchBtn {
@@ -21,4 +21,7 @@
 }
 .searchBar {
     display: none;
+}
+.accountBtn {
+    margin-left: 2em;
 }

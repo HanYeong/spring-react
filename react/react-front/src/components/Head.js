@@ -1,11 +1,11 @@
 import React from 'react';
-import Topbar from './Topbar';
+import AccountContainer from '../containers/AccountContainer';
 
 const Head = ({Children}) => {
     return (
-        <Topbar>
+        <AccountContainer>
             {Children}
-        </Topbar>
+        </AccountContainer>
     );
 };
 

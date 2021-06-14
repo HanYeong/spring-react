@@ -1,0 +1,35 @@
+.login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000080;
+    z-index: 10000;
+}
+.modalContainer {
+    position: absolute;
+    width: 375px;
+    height: 620px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 6px;
+    box-shadow: rgb(0 0 0 / 4%) 0px 6px 16px 0px;
+    transition: box-shadow 0.25s ease-in 0s, transform 0.25s ease-in 0s;
+    background: white;
+}
+.modalHead {
+    display: flex;
+    padding: 1em;
+    background: #e9ecef;
+    justify-content: space-between;
+}
+.hideLogin {
+    display: none;
+}
+.modalCancel {
+    cursor: pointer;
+}
