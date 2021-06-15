@@ -3,8 +3,8 @@ import React from 'react';
 import './App.scss';
 import TextArea from './components/TextArea';
 import { Link, Route } from 'react-router-dom';
-import Notice from './components/Notice';
-import CounterContainer from './containers/CounterContainer';
+import Home from './components/Home';
+import Topbar from './components/Topbar';
 
 function App() {
   // const [ip, setIp] = useState('');
@@ -31,7 +31,10 @@ function App() {
     <div>
       <Link to="/">홈</Link>
       <Link to="/text">텍스트</Link>
-      <Route path="/" exact={true} component={CounterContainer}/>
+      <Route path="/" exact={true}>
+        <Topbar/>
+        <TextArea/>
+      </Route>
       <Route path="/text" exact={true} component={TextArea}/>
     </div>
   );

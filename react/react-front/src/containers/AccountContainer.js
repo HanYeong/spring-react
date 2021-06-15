@@ -18,4 +18,4 @@ function AccountContainer() {
         </>  
     );
 }
-export default AccountContainer;
+export default React.memo(AccountContainer);

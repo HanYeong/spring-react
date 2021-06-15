@@ -3,6 +3,7 @@ import '../scss/Topbar.scss';
 import { BsSearch } from 'react-icons/bs';
 import { DiReact } from "react-icons/di";
 import { BsFillPersonFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 
 const Topbar = ({onAccount}) => {
@@ -10,10 +11,12 @@ const Topbar = ({onAccount}) => {
         <>
         <div className="topBarBox">
             <div className="topBar">
-                <div className="logo">
-                    <DiReact size="1.5em"/>
-                    HY
-                </div>
+                <Link to="/">
+                    <div className="logo">
+                        <DiReact size="1.5em"/>
+                        HY
+                    </div>
+                </Link>
                 <div className="searchBtn">
                     <input type="text" className="searchBar"/>
                     {/* {searchBar ? <input type="text"/> : null} */}
@@ -27,4 +30,4 @@ const Topbar = ({onAccount}) => {
     );
 };
 
-export default Topbar;
+export default React.memo(Topbar);

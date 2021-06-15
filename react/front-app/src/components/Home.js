@@ -1,11 +1,15 @@
 import React from 'react';
+import Topbar from './Topbar';
+import Board from './Board';
 
-const Home = () => {
+function Home() {
     return (
-        <div>
-            <h1>home</h1>
-        </div>
+        <>
+            <Topbar/>
+            <Board>
+            </Board>
+      </>
     );
-};
+}
 
 export default Home;

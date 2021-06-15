@@ -11,7 +11,7 @@ import SubTitle from './SubTitle';
 
 async function getUsers() {
   const response = await axios.get(
-    'http://localhost:8080/api/ip'
+    'https://jsonplaceholder.typicode.com/users'
   );
   return response.data;
 }
@@ -33,14 +33,13 @@ const { loading, data: text, error } = state;
       <Info/>
       <SubTitle/>
       <div className="text">
-        {text}
         {console.log(text.length)}
-        {/* {text.map(text => (
+        {text.map(text => (
           <span  key={text.id}>
             <h3>{text.name}</h3>
             <p>{text.username} ({text.email})</p>
           </span>
-        ))}          */}
+        ))}         
       </div>
       </Board>
       

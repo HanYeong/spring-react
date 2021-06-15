@@ -9,4 +9,4 @@ const Head = ({Children}) => {
     );
 };
 
-export default Head;
+export default React.memo(Head);

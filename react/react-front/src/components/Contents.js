@@ -9,7 +9,7 @@ const Contents = ({posts}) => {
         <div className="content">
             {posts.map(posts => (
                 <div className="contentBox" key={posts.id}>
-                    <Link to="#">
+                    <Link to={"/"+posts.id}>
                         <div className="contentImg">
                             <img src={imgA} alt="contentImg"/>
                         </div>

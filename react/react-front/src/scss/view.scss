@@ -1,0 +1,52 @@
+.viewBox {
+    background: white;
+    max-width: 56.25rem;
+    position: relative;
+    margin: auto;
+    padding: 4rem 1rem 0rem 1rem;
+
+    .title {
+        width: 80%;
+        h1 {
+            font-size: 3rem;
+            color: #202020;
+        }
+    }
+
+    .date {
+        font-size: 1.5em;
+        color: #808080;
+    }
+
+    .info {
+        font-size: 1.5em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-bottom: 1px solid #e9ecef;
+        color: #505050;
+    }
+
+    .subTitle {
+        h2 {
+            margin-top : 1em;
+            background: #f8f9fa;
+            padding: 1.5em 1em 1.5em 1em;
+            color: #505050;
+            font-size: 2em;
+        }
+    }
+
+    .text {
+        h3 {
+            font-size:  2em;
+            color: 	#303030;
+        }
+        p {
+            font-size: 1.5em;
+            line-height: 1.7;
+            letter-spacing: -0.04em;
+            color: 	#303030;
+            margin-bottom: 2em;
+        }
+    }
+}

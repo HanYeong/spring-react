@@ -1,11 +1,12 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import '../scss/loginModal.scss';
 import {BsX} from 'react-icons/bs';
 import { active_modal } from '../models/account';
+import Login from './Login';
 
 function LoginModal({visible}) {
-    const flag = useSelector(state => state.account);
+    // const flag = useSelector(state => state.account);
     const dispatch = useDispatch();
 
     const onAccount = () => {
@@ -16,8 +17,9 @@ function LoginModal({visible}) {
             <div className="modalContainer">
                 <div className="modalHead">
                     <b>계정 관리</b>
-                    <BsX size="1.5em" className="modalCancel" onClick={onAccount}/>
                 </div>
+                <BsX size="1.5em" className="modalCancel" onClick={onAccount}/>
+                <Login />
             </div>
         </div>
     );
