@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Topbar from '../components/Topbar';
 import { active_modal } from '../models/account';
-
+import LoginModal from '../components/LoginModal';
 function AccountContainer() {
     const flag = useSelector(state => state.account);
     const dispatch = useDispatch();
@@ -12,7 +12,10 @@ function AccountContainer() {
     };
     console.log(flag);
     return (
-        <Topbar onFlag={flag} onAccount={onAccount}/>
+        <>
+            <Topbar onAccount={onAccount}/>
+            <LoginModal visible={flag ? "login" : "hideLogin"}/>
+        </>  
     );
 }
 export default AccountContainer;

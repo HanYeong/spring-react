@@ -3,9 +3,9 @@ import '../scss/Topbar.scss';
 import { BsSearch } from 'react-icons/bs';
 import { DiReact } from "react-icons/di";
 import { BsFillPersonFill } from 'react-icons/bs';
-import LoginModal from './LoginModal';
 
-const Topbar = ({onFlag, onAccount}) => {
+
+const Topbar = ({onAccount}) => {
     return (
         <>
         <div className="topBarBox">
@@ -22,7 +22,7 @@ const Topbar = ({onFlag, onAccount}) => {
                 </div>
             </div>
         </div>
-        <LoginModal visible={onFlag ? "login" : "hideLogin"}/>
+        
         </>
     );
 };

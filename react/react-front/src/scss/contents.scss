@@ -17,13 +17,16 @@
     transition: box-shadow 0.25s ease-in 0s, transform 0.25s ease-in 0s;
     display: flex;
     flex-direction: column;
+
     a {
         text-decoration: none;
         color: inherit;
     }
+
     .contentImg {
         position: relative;
         padding-top: 50%;
+        
         img {
             position: absolute;
             top: 0;
@@ -33,12 +36,15 @@
             object-fit: fill;
         }
     }
+
     .contentText {
         padding: 1em;
+
         h4 {
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
         p {
             overflow: hidden;
             text-overflow: ellipsis;
@@ -46,8 +52,10 @@
             color: rgb(73, 80, 87);
         }
     }
+
     .contentFooter {
-        padding: 1em; 
+        padding: 1em;
+        
         img {
             width: 2em;
             height: 2em;
@@ -55,6 +63,7 @@
             margin-right: 0.5em;
             object-fit: cover;
         }
+
         a {
             display: flex;
             align-items: center;
