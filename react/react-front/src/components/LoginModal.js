@@ -3,7 +3,7 @@ import '../scss/loginModal.scss';
 import {BsX} from 'react-icons/bs';
 import Login from './Login';
 
-function LoginModal({visible, onAccount}) {
+function LoginModal({visible, onAccount, onLogin}) {
     return (
         <div className={visible}>
             <div className="modalContainer">
@@ -11,7 +11,7 @@ function LoginModal({visible, onAccount}) {
                     <b>계정 관리</b>
                 </div>
                 <BsX size="1.5em" className="modalCancel" onClick={onAccount}/>
-                <Login />
+                <Login onLogin={onLogin}/>
             </div>
         </div>
     );

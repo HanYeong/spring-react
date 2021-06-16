@@ -45,7 +45,7 @@ export default function post(state = initialState, action) {
             return {
                 ...state,
                 post: {
-                    loading: true,
+                    loading: false,
                     data: null,
                     error: action.error
                 }

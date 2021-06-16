@@ -21,9 +21,7 @@ const View = ({post}) => {
                     <h3>
                         {post.subTitle}
                     </h3>
-                    <textarea name="textarea">
-                        {post.content}
-                    </textarea>
+                    <textarea name="textarea" readOnly value={post.content}/>
                 </span>
             </div>
         </div>

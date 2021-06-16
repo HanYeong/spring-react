@@ -31,9 +31,7 @@ function ViewContainer() {
                     <h3>
                     blank
                     </h3>
-                    <textarea name="textarea">
-                    blank
-                    </textarea>
+                    <textarea name="textarea" readOnly value="blank"/>
                 </span>
             </div>
         </div>
