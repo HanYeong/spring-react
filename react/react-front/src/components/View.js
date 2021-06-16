@@ -2,29 +2,31 @@ import React from 'react';
 import '../scss/view.scss';
 
 const View = ({post}) => {
-    const today = new Date().toLocaleString();
     return (
         <>
             <div className="title">
-                <span><h1>{post.company.catchPhrase}</h1></span>
+                <span><h1>{post.title}</h1></span>
             </div>
             <div className="date">
-                <span>{today}</span>
+                <span>{post.regDate}</span>
             </div>
             <div className="info">
-                <span><b>{post.username}</b></span>
+                <span><b>{post.writer}</b></span>
             </div>
             <div className="subTitle">
-                <span><h2>{post.company.bs}</h2></span>
+                <span><h2>{post.subTitle}</h2></span>
             </div>
             <div className="text">
                 <span>
                     <h3>
-                        {post.email}
+                        {post.subTitle}
                     </h3>
-                    <p>
-                        {post.address.city}
-                    </p>
+                    {/* <p>
+                        {post.content}
+                    </p> */}
+                    <textarea name="textarea">
+                        {post.content}
+                    </textarea>
                 </span>
             </div>
         </>

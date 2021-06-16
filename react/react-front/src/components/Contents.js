@@ -8,26 +8,26 @@ const Contents = ({posts}) => {
         <>
         <div className="content">
             {posts.map(posts => (
-                <div className="contentBox" key={posts.id}>
-                    <Link to={"/"+posts.id}>
+                <div className="contentBox" key={posts.bno}>
+                    <Link to={"/"+posts.bno}>
                         <div className="contentImg">
                             <img src={imgA} alt="contentImg"/>
                         </div>
                         <div className="contentText">
                             <h4>
-                                {posts.username}
+                                {posts.title}
                             </h4>
                             <p>
-                                {posts.email}
+                                {posts.subTitle}
                             </p>
                         </div>
                     </Link>
                     <div className="contentFooter">
-                            <Link to="#">
-                                <img src={imgB} alt="contentUser"/>
-                                <span>{posts.name}</span>
-                            </Link>
-                        </div>
+                        <Link to="#">
+                            <img src={imgB} alt="contentUser"/>
+                            <span>{posts.writer}</span>
+                        </Link>
+                    </div>
                 </div>
             ))}
         </div>

@@ -41,11 +41,15 @@
             font-size:  2em;
             color: 	#303030;
         }
-        p {
+        textarea {
+            width: 100%;
+            display: inline-table;
+            border: none;
+            overflow-y: hidden;
             font-size: 1.5em;
             line-height: 1.7;
             letter-spacing: -0.04em;
-            color: 	#303030;
+            color: 	#505050;
             margin-bottom: 2em;
         }
     }

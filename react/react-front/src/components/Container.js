@@ -17,7 +17,6 @@ const Container = () => {
                 <div className="viewBox">
                     <ViewContainer />
                 </div>
-                    
             </Route>
             <Route path="*">
                 <div>page not found</div>
