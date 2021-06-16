@@ -3,7 +3,7 @@
     max-width: 56.25rem;
     position: relative;
     margin: auto;
-    padding: 4rem 1rem 0rem 1rem;
+    padding: 4rem 1rem 2rem 1rem;
 
     .title {
         width: 80%;
@@ -12,18 +12,39 @@
             color: #202020;
         }
     }
+    .title-blank {
+        width: 80%;
+        h1 {
+            font-size: 3rem;
+            color: transparent;
+            background: #f8f9fa;
+        }
+    }
 
     .date {
         font-size: 1.5em;
         color: #808080;
     }
+    .date-blank {
+        font-size: 1.5em;
+        color: transparent;
+        background: #f8f9fa;
+    }
 
     .info {
         font-size: 1.5em;
-        padding-top: 1em;
+        margin-top: 1em;
         padding-bottom: 1em;
         border-bottom: 1px solid #e9ecef;
         color: #505050;
+    }
+    .info-blank {
+        font-size: 1.5em;
+        margin-top: 1em;
+        padding-bottom: 1em;
+        border-bottom: 1px solid #e9ecef;
+        color: transparent;
+        background: #f8f9fa;
     }
 
     .subTitle {
@@ -32,6 +53,15 @@
             background: #f8f9fa;
             padding: 1.5em 1em 1.5em 1em;
             color: #505050;
+            font-size: 2em;
+        }
+    }
+    .subTitle-blank {
+        h2 {
+            margin-top : 1em;
+            background: #f8f9fa;
+            padding: 1.5em 1em 1.5em 1em;
+            color: transparent;
             font-size: 2em;
         }
     }
@@ -50,7 +80,30 @@
             line-height: 1.7;
             letter-spacing: -0.04em;
             color: 	#505050;
-            margin-bottom: 2em;
+            padding: 0;
+            outline: none;
+            margin: 0;
+        }
+    }
+    .text-blank {
+        h3 {
+            font-size:  2em;
+            color: 	transparent;
+            background: #f8f9fa;
+        }
+        textarea {
+            width: 100%;
+            display: inline-table;
+            border: none;
+            overflow-y: hidden;
+            font-size: 1.5em;
+            line-height: 1.7;
+            letter-spacing: -0.04em;
+            color: 	transparent;
+            padding: 0;
+            outline: none;
+            margin: 0;
+            background: #f8f9fa;
         }
     }
 }

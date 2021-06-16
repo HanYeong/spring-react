@@ -21,6 +21,7 @@ const initialState = {
     }
 }
 export default function post(state = initialState, action) {
+    state.post.data = null;
     switch (action.type) {
         case GET_POST_ID:
             return {

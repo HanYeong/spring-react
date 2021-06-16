@@ -17,4 +17,4 @@ const RawRouter = () => {
       </Router>
     );
   };
-  export default RawRouter;
+  export default React.memo(RawRouter);

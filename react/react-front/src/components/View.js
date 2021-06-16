@@ -3,7 +3,7 @@ import '../scss/view.scss';
 
 const View = ({post}) => {
     return (
-        <>
+        <div className="viewBox">
             <div className="title">
                 <span><h1>{post.title}</h1></span>
             </div>
@@ -21,15 +21,12 @@ const View = ({post}) => {
                     <h3>
                         {post.subTitle}
                     </h3>
-                    {/* <p>
-                        {post.content}
-                    </p> */}
                     <textarea name="textarea">
                         {post.content}
                     </textarea>
                 </span>
             </div>
-        </>
+        </div>
     );
 }
-export default View;
+export default React.memo(View);

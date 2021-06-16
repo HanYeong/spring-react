@@ -34,4 +34,4 @@ const Contents = ({posts}) => {
       </>
     );
 };
-export default Contents;
+export default React.memo(Contents);

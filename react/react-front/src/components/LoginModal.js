@@ -1,17 +1,9 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import '../scss/loginModal.scss';
 import {BsX} from 'react-icons/bs';
-import { active_modal } from '../models/account';
 import Login from './Login';
 
-function LoginModal({visible}) {
-    // const flag = useSelector(state => state.account);
-    const dispatch = useDispatch();
-
-    const onAccount = () => {
-        dispatch(active_modal());
-    };
+function LoginModal({visible, onAccount}) {
     return (
         <div className={visible}>
             <div className="modalContainer">
@@ -24,4 +16,4 @@ function LoginModal({visible}) {
         </div>
     );
 }
-export default LoginModal;
+export default React.memo(LoginModal);

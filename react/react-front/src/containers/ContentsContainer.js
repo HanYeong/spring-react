@@ -18,4 +18,4 @@ function ContentsContainer() {
     );
 }
 
-export default ContentsContainer;
+export default React.memo(ContentsContainer);

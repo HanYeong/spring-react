@@ -14,7 +14,7 @@ function AccountContainer() {
     return (
         <>
             <Topbar onAccount={onAccount}/>
-            <LoginModal visible={flag ? "login" : "hideLogin"}/>
+            <LoginModal onAccount={onAccount} visible={flag ? "login" : "hideLogin"}/>
         </>  
     );
 }
