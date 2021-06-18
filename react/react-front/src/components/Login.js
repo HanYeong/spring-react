@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Login = ({onLogin}) => {
-    const [text, setText] = useState("test");
     let a = 't';
     return (
         <div className="loginBox">
