@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Login = ({onLogin}) => {
+    const [text, setText] = useState("test");
+    let a = 't';
     return (
         <div className="loginBox">
             <div className="inputEmailBox">
@@ -17,7 +19,8 @@ const Login = ({onLogin}) => {
             </div>
             <div className="btnBox">
                 <span><Link to="#">가입하기</Link></span>
-                <button type="button" onClick={onLogin}>로그인</button>
+                {text}
+                <button type="button" onClick={() => onLogin("test", "1234")}>로그인</button>
             </div>
         </div>
     );

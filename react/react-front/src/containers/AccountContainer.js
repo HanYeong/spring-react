@@ -9,8 +9,8 @@ function AccountContainer() {
     const onAccount = () => {
         dispatch(active_modal());
     };
-    const onLogin = () => {
-        dispatch(postAccount("test", "1234"));
+    const onLogin = (id, pwd) => {
+        dispatch(postAccount(id, pwd));
     }
     console.log(flag);
     return (

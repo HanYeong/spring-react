@@ -13,6 +13,7 @@ export const activeModal = () => dispatch => {
 };
 
 export const postAccount = (id, pwd) => async dispatch => {
+    console.log(id, pwd);
     dispatch({ type: POST_ACCOUNT_CHECK });
     try {
         const post = await postsAPI.postAccountCheck(id, pwd);
