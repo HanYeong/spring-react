@@ -6,7 +6,7 @@ import { BsFillPersonFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 
-const Topbar = ({onAccount}) => {
+const Topbar = ({onAccount, accountData}) => {
     return (
         <>
         <div className="topBarBox">
@@ -18,6 +18,7 @@ const Topbar = ({onAccount}) => {
                     </div>
                 </Link>
                 <div className="searchBtn">
+                    {accountData}
                     <input type="text" className="searchBar"/>
                     {/* {searchBar ? <input type="text"/> : null} */}
                     <BsSearch size="1.5em"/>

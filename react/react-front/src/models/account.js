@@ -5,6 +5,7 @@ const ACTIVE_MODAL = 'ACTIVE_MODAL';
 const POST_ACCOUNT_CHECK = 'POST_ACCOUNT_CHECK';
 const POST_ACCOUNT_CHECK_SUCCESS = 'POST_ACCOUNT_CHECK_SUCCESS';
 const POST_ACCOUNT_CHECK_ERROR = 'POST_ACCOUNT_CHECK_ERROR';
+const POST_ACCOUNT_CHECK_LOCAL = 'POST_ACCOUNT_CHECK_LOCAL';
 
 export const active_modal = () => ({type: ACTIVE_MODAL});
 
@@ -17,12 +18,20 @@ export const postAccount = (id, pwd) => async dispatch => {
     dispatch({ type: POST_ACCOUNT_CHECK });
     try {
         const post = await postsAPI.postAccountCheck(id, pwd);
-        console.log(post);
         dispatch({type: POST_ACCOUNT_CHECK_SUCCESS, post});
     } catch (e) {
         dispatch({type: POST_ACCOUNT_CHECK_ERROR, error: e});
     }
 };
+
+export const userInfo = () => dispatch => {
+    const userData = localStorage.userInfo;
+    if(userData){
+        const Info = JSON.parse(userData);
+        console.log("데이터 : " + userData);
+        dispatch({type: POST_ACCOUNT_CHECK_LOCAL, Info});
+    }
+}
 
 const initialState = {
     status: {
@@ -35,6 +44,7 @@ const initialState = {
 }
 
 export default function account(state = initialState, action) {
+    console.log("액션 : "+ JSON.stringify(action));
     switch (action.type) {
         case ACTIVE_MODAL:
             return {
@@ -62,8 +72,14 @@ export default function account(state = initialState, action) {
                 ...state,
                 status: {
                     loading: false,
-                    token: action.post,
-                    id: null,
+                    token: localStorage.setItem(
+                        "userInfo",
+                        JSON.stringify({
+                            id: action.post.id,
+                            email: action.post.email
+                        })
+                    ),
+                    id: action.post,
                     error: null
                 }
             }
@@ -75,6 +91,17 @@ export default function account(state = initialState, action) {
                     token: null,
                     id: null,
                     error: action.error
+                }
+            }
+
+        case POST_ACCOUNT_CHECK_LOCAL:
+            return {
+                ...state,
+                status: {
+                    loading: false,
+                    token: null,
+                    id: action.Info,
+                    error: null
                 }
             }
         default:

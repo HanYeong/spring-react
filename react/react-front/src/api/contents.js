@@ -7,7 +7,7 @@ const sleep = n => new Promise(resolve => setTimeout(resolve, n));
 export const getContents = async () => {
     // const response = await axios.get('https://jsonplaceholder.typicode.com/users');
     const response = await axios.get(BASE_URL+'list');
-    // console.log(response.data);
+    console.log(response.data);
     return response.data;
 };
 

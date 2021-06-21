@@ -1,14 +1,14 @@
 import axios from "axios";
 
-const BASE_URL = 'http://localhost:8080/api/';
+const BASE_URL = 'http://localhost:8080/account/';
 
 const sleep = n => new Promise(resolve => setTimeout(resolve, n));
 
 export const postAccountCheck = async (id, pwd) => {
     await sleep(1000);
     const response = await axios.post(BASE_URL+'account', {
-            postId: id,
-            postPwd: pwd
+            id: id,
+            pwd: pwd
     });
-    return "로그인";
+    return response.data;
 }
